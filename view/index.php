@@ -11,7 +11,7 @@ if($_POST)
     
     if($code)
     {
-        $hash = gesh::save($code, $type);
+        $hash = Gesh::save($code, $type);
         if($hash)
             $app->redirect("/".$hash."/");
     }

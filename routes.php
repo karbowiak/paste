@@ -10,6 +10,6 @@ $app->get("/", function () use ($app){
 $app->post("/", function () use ($app){
     include( "view/index.php" );
 });
-$app->get("/:hash", function ($hash) use ($app){
+$app->get("/:hash/", function ($hash) use ($app){
     include( "view/view.php" );
 });
