@@ -6,7 +6,7 @@ $app->notFound(function () use ($app) {
 // Default route
 $app->map("/", function () use ($app){
     include( "view/index.php" );
-})->via("GET", "POST");;
+})->via("GET", "POST");
 
 $app->get("/:hash/", function ($hash) use ($app){
     include( "view/view.php" );

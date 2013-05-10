@@ -12,6 +12,6 @@ chdir($baseDir);
 $config = array(
 	"templates.path" => $baseDir."templates/",
 	"mode" => "production",
-	"debug" => true,
+	"debug" => false,
 	"log.enabled" => false
 	);
