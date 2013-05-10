@@ -1,5 +1,9 @@
 <?php
+// Load the config
 require_once( "config.php" );
+
+// Load the vendor stuff
+require( "vendor/autoload.php" );
 
 spl_autoload_register("zfautoload");
 

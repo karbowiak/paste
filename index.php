@@ -4,9 +4,6 @@
 session_cache_limiter(false);
 session_start();
 
-// Autoload Slim + Twig
-require( "vendor/autoload.php" );
-
 // Load modules + database stuff (and the config)
 require( "init.php" );
 
