@@ -1,0 +1,9 @@
+{
+    "require": {
+        "slim/slim": "*",
+        "slim/extras": "*",
+        "twig/twig": "*",
+        "easybook/geshi": "*"
+    },
+    "minimum-stability": "dev"
+}

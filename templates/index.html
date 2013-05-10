@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form accept-charset="UTF-8" name="code" method="POST" action="/">
+    <fieldset>
+        <legend>Rules: <small>Don't post illegal stuff - Don't abuse</small></legend>
+        <table>
+            <tr><td><textarea class="span12" id="code" name="code" placeholder="Type in your message" rows="15" onkeyup="countChar(this)"></textarea></td></tr>
+            <tr><td>
+                <select name="type" id="type">
+                    <option value="">None</option>
+                    <option value="php">PHP</option>
+                    <option value="bash">Bash</option>
+                    <option value="c">C</option>
+                    <option value="csharp">C#</option>
+                    <option value="cpp">C++</option>
+                    <option value="css">CSS</option>
+                    <option value="html">HTML</option>
+                    <option value="">----------------</option>
+                    <option value="apache">Apache Configuration</option>
+                    <option value="applescript">AppleScript</option>
+                    <option value="asp">ASP</option>
+                    <option value="bash">Bash</option>
+                    <option value="c">C</option>
+                    <option value="c_mac">C (Mac)</option>
+                    <option value="cpp">C++</option>
+                    <option value="csharp">C#</option>
+                    <option value="css">CSS</option>
+                    <option value="d">D</option>
+                    <option value="delphi">Delphi</option>
+                    <option value="diff">Diff</option>
+                    <option value="dos">DOS</option>
+                    <option value="html">HTML</option>
+                    <option value="ini">INI</option>
+                    <option value="java">Java</option>
+                    <option value="javascript">Javascript</option>
+                    <option value="lua">LUA</option>
+                    <option value="mysql">MySQL</option>
+                    <option value="objc">Objective-C</option>
+                    <option value="perl">Perl</option>
+                    <option value="php">PHP</option>
+                    <option value="python">Python</option>
+                    <option value="ruby">Ruby</option>
+                    <option value="smarty">Smarty</option>
+                    <option value="sql">SQL</option>
+                    <option value="vb">Visual Basic</option>
+                    <option value="xml">XML</option>
+                </select>
+            </td></tr>
+            <tr><td><div class="pull-right" id="charsleft">500000</div></td></tr>
+            <tr><td><button class="btn btn-info" type="submit">Paste</button></td></tr>
+        </table>
+    </fieldset>
+</form>
+
+{% endblock %}
+
+{% block script %}
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.0/zepto.min.js"></script>
+    <script type="text/javascript">
+    function countChar(val){
+        var len = val.value.length;
+        if (len >= 500000) {
+            val.value = val.value.substring(0, 500000);
+        }else {
+            $('#charsleft').text(500000 - len);
+        }
+    };
+    </script>
+{% endblock %}

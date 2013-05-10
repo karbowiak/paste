@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% set pageTitle = '404' %}
+{% block title %}404{% endblock %}
+
+{% block content %}
+<h2>404</h2>
+<p>The content you're after isn't here - please go <a onClick="history.go(-1);return true;">back</a> and try again</p>
+{% endblock %}
